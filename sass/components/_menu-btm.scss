@@ -1,0 +1,130 @@
+.menu-btm {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+     width: 40px;
+     height: 40px;
+     padding: 0;
+
+     background-color: transparent;
+     border: none;
+     margin-left: auto;
+
+     cursor: pointer;     
+     
+     @media screen and (min-width: 767px) {
+          display: none;
+     }
+
+     @media screen and (min-width: 1199px) {
+          display: none;
+     }
+}
+
+.menu-container {
+     position: fixed;
+     top: 0;
+     left: 0;
+     
+     display: flex;
+     flex-direction: column;
+
+     width: 100%;
+     height: 100%;
+     padding: 40px 48px;
+
+     background-color: white;
+     color: none;
+
+     transform: translateX(100%);
+     transition: transform 400ms;
+
+     &.is-open {
+          transform: translateX(0);
+     }
+}
+
+.menu-toggle {
+     position: absolute;
+     top: 20px;
+     right: 20px;
+
+     border: none;
+     background-color: white;
+     color: var(--accent-color);
+
+     &:hover,
+     &:focus {
+          fill: currentColor;
+     }
+}    
+.menu {
+     margin-bottom: auto;
+
+     &:hover,
+     &:focus {
+          color: var(--accent-color);
+     }
+}
+.menu__item:not(:last-child) {
+     margin-bottom: 32px;
+}
+.mobil__list {
+     display: block;
+     margin-top: auto;
+
+}
+.menu__link {
+     text-decoration: none;
+
+     font-weight: 500;
+     font-size: 40px;
+     line-height: var(47/40);
+     letter-spacing: 0.02em;
+
+     color: #212121;
+}
+
+.mobil__tel {
+     display: block;
+     text-decoration: none;
+
+     font-weight: 500;
+     font-size: 34px;
+     line-height: calc(40/34);
+     letter-spacing: 0.02em;
+
+     color: var(--accent-color);
+}
+
+.mobil__email {
+     display: block;
+     text-decoration: none;
+
+     margin-top: 32px;
+
+     font-weight: 500;
+     font-size: 24px;
+     line-height: calc(28/24);
+     letter-spacing: 0.02em;
+
+     color: #757575;
+}
+
+.socials-mobil {
+     display: flex;
+     margin-top: 60px;
+     column-gap: 20px;
+}
+
+.socials-mobil__link {
+     text-decoration: none;
+
+     font-weight: 500;
+     font-size: 18px;
+     line-height: calc(22/18);
+     letter-spacing: 0.02em;
+
+     color: var(--accent-color);
+}

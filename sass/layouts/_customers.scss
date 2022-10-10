@@ -1,0 +1,65 @@
+.customers {
+     @include section;
+
+     @media screen and (min-width: 767px) {
+          @include section;
+     }
+     @media screen and (min-width: 1199px) {
+          @include section(94px);
+     }
+     &__title {
+          margin-top: 0;
+          margin-bottom: 30px;
+          font-weight: 700;
+          font-size: 28px;
+          line-height: calc(33/28);
+          text-align: center;
+          letter-spacing: 0.03em;
+          color: var(--title-text-color);
+          
+          @media screen and (min-width: 1199px) {
+               margin-bottom: 50px;
+               font-weight: 700;
+               font-size: 36px;
+               line-height: calc(42/36);
+          }
+     }
+     &__list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 30px;
+          justify-content: center;
+
+          @media screen and (min-width: 767px) {
+               display: flex;
+               flex-wrap: wrap;
+               gap: 30px;
+               justify-content: center;          
+          }
+          @media screen and (min-width: 1199px) {
+               display: flex;
+               gap: 30px;
+               justify-content: center;
+          }
+     }
+     &__link {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 170px;
+          height: 92px;
+          background-color: var(--primary-bg-color);
+          border: 1px solid rgba(175, 177, 184, 1);
+          border-radius: 4px;
+          color: rgba(175, 177, 184, 1);
+          transition: background-color var(--animation), color var(--animation);
+     }
+     &__link:hover,
+     &__link:focus {
+          color: var(--accent-color);
+          border-color: var(--accent-color);
+     }
+     &__icon {
+          fill: currentColor;
+     }
+}

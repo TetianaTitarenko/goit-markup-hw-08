@@ -1,0 +1,25 @@
+.logo {
+     // position: absolute;
+     // left: 0;
+     color: var(--title-text-color);
+     text-decoration: none;
+     font-family: var(--secondary-font);
+     font-weight: 700;
+     font-size: 24px;
+     line-height: calc(28/24);
+     letter-spacing: 0.03em;
+     cursor: pointer;
+
+     @media screen and (min-width: 1199px) {
+          font-weight: 700;
+          font-size: 26px;
+          line-height: calc(31/26);
+     }
+     
+     &__link {
+     color: var(--accent-color);
+     }
+     &__light {
+          color: var(--button-ourteam-bg-color);
+     }
+}
