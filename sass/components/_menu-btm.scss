@@ -80,10 +80,14 @@
 
      font-weight: 500;
      font-size: 40px;
-     line-height: var(47/40);
+     line-height: 47px;
      letter-spacing: 0.02em;
 
      color: #212121;
+}
+
+.menu__link--active {
+     color: var(--accent-color);
 }
 
 .mobil__tel {
