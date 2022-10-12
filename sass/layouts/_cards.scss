@@ -17,10 +17,10 @@
           display: block;
 
           @media screen and (min-width: 767px) {
-               width: calc((100% - 30px) / 2); 
+               flex-basis: calc((100% - 30px) / 2); 
           }
           @media screen and (min-width: 1199px) {
-               width: calc((100% - 60px) / 3);          
+               flex-basis: calc((100% - 60px) / 3);          
           }
      }
 
@@ -36,10 +36,9 @@
      }
 }
 .cards__link {
-     display: flex;
+     display: block;
      text-decoration: none;
      transition: box-shadow var(--animation);
-     flex-direction: column;
      height: 100%;
 
      &:hover,
@@ -53,6 +52,11 @@
      }
 }
 .cards__blok {
+     display: flex;
+     flex-direction: column;
+
+     position: relative;
+     overflow: hidden;
 
      width: 100%;
 
@@ -73,10 +77,10 @@
      }
 }
 
-.cards__box {
-     position: relative;
-     overflow: hidden;
-}
+// .cards__box {
+//      position: relative;
+//      overflow: hidden;
+// }
 .cards__img {
      display: block;
      width: 100%;
@@ -119,7 +123,6 @@
      flex-grow: 1;
 }
 .cards__title {
-     // display: block;
      width: 100%;
      margin-top: 0;
      margin-bottom: 4px;
@@ -130,7 +133,6 @@
      color: var(--title-text-color);
 }
 .cards__subtitle {
-     // display: block;
      width: 100%;
      margin-top: 0;
      margin-bottom: 0;

@@ -820,7 +820,7 @@ ul {
     display: -ms-flexbox;
     display: flex;
     padding-top: 0;
-    padding-bottom: 0;
+    padding-bottom: 94px;
   }
 }
 
@@ -1265,6 +1265,9 @@ ul {
     text-align: left;
   }
 }
+.footer__tablet {
+  margin-bottom: 60px;
+}
 @media screen and (min-width: 767px) {
   .footer__tablet {
     display: -webkit-box;
@@ -1273,6 +1276,7 @@ ul {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    margin-bottom: 0;
   }
 }
 .footer__wrapper {
@@ -1286,6 +1290,7 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 60px;
 }
 @media screen and (min-width: 767px) {
   .footer__wrapper {
@@ -1306,19 +1311,7 @@ ul {
     width: 231px;
     margin-left: 0;
     margin-right: 0;
-  }
-}
-.footer__list {
-  margin-bottom: 60px;
-}
-@media screen and (min-width: 1199px) {
-  .footer__list {
     margin-bottom: 0;
-  }
-}
-@media screen and (min-width: 1199px) {
-  .footer__item {
-    margin-top: 0;
   }
 }
 @media screen and (min-width: 1199px) {
@@ -1335,8 +1328,6 @@ ul {
   line-height: 1.7142857143;
   letter-spacing: 0.03em;
   cursor: pointer;
-}
-.footer__list {
   margin-top: 20px;
 }
 .footer__link {
@@ -1616,12 +1607,14 @@ ul {
 }
 @media screen and (min-width: 767px) {
   .cards__list__item {
-    width: calc((100% - 30px) / 2);
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 1199px) {
   .cards__list__item {
-    width: calc((100% - 60px) / 3);
+    -ms-flex-preferred-size: calc((100% - 60px) / 3);
+        flex-basis: calc((100% - 60px) / 3);
   }
 }
 .cards__list__item:not(:last-child) {
@@ -1639,18 +1632,12 @@ ul {
 }
 
 .cards__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   text-decoration: none;
   -webkit-transition: -webkit-box-shadow var(--animation);
   transition: -webkit-box-shadow var(--animation);
   transition: box-shadow var(--animation);
   transition: box-shadow var(--animation), -webkit-box-shadow var(--animation);
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   height: 100%;
 }
 .cards__link:hover, .cards__link:focus {
@@ -1663,6 +1650,15 @@ ul {
 }
 
 .cards__blok {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  overflow: hidden;
   width: 100%;
 }
 @media screen and (min-width: 767px) {
@@ -1683,11 +1679,6 @@ ul {
   .cards__item:not(:last-child) {
     margin-bottom: 0;
   }
-}
-
-.cards__box {
-  position: relative;
-  overflow: hidden;
 }
 
 .cards__img {
